@@ -27,7 +27,7 @@ public class HelloWorldService {
 
 	public String getHello(Long lValue) {
 
-		System.out.println("result: " + helloRepository.findById(lValue));
+		System.out.println("result!: " + helloRepository.findById(lValue));
 		Optional<Hello> result = helloRepository.findById(lValue);
 
 		if (result.isPresent()) {

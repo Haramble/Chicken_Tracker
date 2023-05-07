@@ -29,7 +29,7 @@ public class HelloWorldController {
 
 	@GetMapping("/api/hello")
 	public String test(@RequestParam("value") Long value) {
-		System.out.println("hello!!!!");
+		System.out.println("hello!!!!???");
 		return helloWorldService.getHello(value);
 	}
 }

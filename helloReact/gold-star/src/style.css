@@ -1,0 +1,169 @@
+body {
+  background-color: #000000;
+  height: 80%;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+
+  width : 100%;
+  height: 10%;
+}
+
+.logo {
+  max-width: 5%;
+  height: auto;
+  margin-right: 10px;
+}
+.additional-boxes {
+  position : absolute;
+  display: flex;
+  gap: 10px;
+
+  float: right; /* 요소를 오른쪽으로 정렬 */
+  right: 30px;
+  width: 300px; /* 요소의 너비 설정 */
+  height: 50px; /* 요소의 높이 설정 */
+}
+
+.box {
+  background-color: #ffffff;
+  padding: 10px;
+  color: #000000;
+}
+
+.main-content {
+  margin-top: 10%;
+  margin-left: 112px;
+  margin-right: 113px;
+  height: 865px;
+}
+
+.left-box {
+  width: 60%;
+  height : 75%;
+  background-color: #ffffff;
+  padding: 5px;
+  box-sizing: border-box;
+  float : left ;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-box {
+  width: 30%;
+  height : 75%;
+  background-color: #ffffff;
+  padding: 5px;
+  box-sizing: border-box;
+  float : right ;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+.right-inner-box2{
+  margin-top: 10px;
+  
+}
+.ceiling{
+  height: 5%;
+  width : 97%;
+  margin: 2%;
+  background-color: #ff0000;
+
+  text-align: center;
+}
+
+.inner-box {
+  background-color: #000000;
+
+  width: 97%;
+  height: 97%;
+  
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+
+}
+.left-inner-box2{
+  position: relative;
+  width : 95%;
+  height: 95%;
+  border: 2px solid orange;  
+  text-align: center;
+
+  margin : 2% ;
+
+  /* 자식요소 중앙정렬 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.data-area{
+  width: 97%;
+  height: 20%;
+
+  margin: 2%;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(5, 1fr); /* 5개의 열로 요소 배치 */
+    gap: 1px; /* 열 사이의 간격 조정 */
+
+
+  text-align: center;
+
+  background-color:#000000;
+}
+
+.box1{
+  background-color: #000000;
+  height : 50 px;
+}
+.box1_in{
+  
+}
+.box2{
+  background-color: #000000;
+  height : 50 px;
+}
+.box3{
+  background-color: #000000;
+  height : 50 px;
+}
+.box4{
+  background-color: #000000;
+  height : 50 px;
+}
+.box5{
+  background-color: #000000;
+  height : 50 px;
+  grid-column : span 5;
+}
+
+
+.right-inner-box2{
+
+  position: relative;
+  left: 1.5%;
+
+  
+  display: flex;
+  justify-content: center; /* 가로 가운데 정렬 */
+  
+  margin-top : 2px;
+  border: 2px solid orange;
+
+  width : 96%;
+  height: 52%;
+
+}

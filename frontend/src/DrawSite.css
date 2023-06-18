@@ -1,0 +1,62 @@
+.draw-site-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .result-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    margin-bottom: 10px;
+  }
+  
+  .result-container {
+    position: relative;
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 600px;
+    height: 400px;
+  }
+  
+  .result-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10%;
+  }
+  
+  .result-tooltip {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  .three {
+    border-color: red;
+  }
+  
+  .four {
+    border-color: yellow;
+  }
+  
+  .five {
+    border-color: green;
+  }
+  

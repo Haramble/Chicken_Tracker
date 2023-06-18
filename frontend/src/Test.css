@@ -1,0 +1,174 @@
+/* Test.css */
+
+body {
+  background-color: #000000;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 5%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.main-content {
+  margin-top: 20px;
+  height: 1000px;
+}
+
+.left-box {
+  width: 60%;
+  height: 70%;
+  background-color: #ffffff;
+  padding: 5px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.right-box {
+  width: 30%;
+  height: 70%;
+  background-color: #ffffff;
+  padding: 5px;
+  box-sizing: border-box;
+  float: right;
+}
+
+.inner-box {
+  background-color: #000000;
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+}
+
+.left-inner-box2 {
+  position: relative;
+  width: 95%;
+  height: 95%;
+  left: 2.5%;
+  border: 2px solid orange;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-inner-box2 {
+  width: 95%;
+  height: 60%;
+  border: 2px solid orange;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ceiling {
+  position: relative;
+  width: 95%;
+  height: 4%;
+  left: 2.5%;
+  background-color: #ffffff;
+  padding: 5px;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.button1 {
+  position: relative;
+  width: 80px;
+  height: 25px;
+  float: left;
+  left: 20%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.button10 {
+  width: 80px;
+  height: 25px;
+  position: relative;
+  float: right;
+  right: 20%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.draw-site-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  margin-bottom: 10px;
+}
+
+.result-container {
+  position: relative;
+  border: 1px solid black;
+  padding: 10px;
+  display: inline-block;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 600px;
+  height: 400px;
+  flex-wrap: wrap;
+}
+
+.result-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 10%;
+  color: white;
+}
+
+.hovered {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid green;
+  padding: 10px;
+  color: black;
+}
+
+.three {
+  border-color: red;
+}
+
+.four {
+  border-color: yellow;
+}
+
+.five {
+  border-color: green;
+}

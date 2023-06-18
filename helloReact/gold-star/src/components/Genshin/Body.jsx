@@ -1,34 +1,81 @@
-import React from "react";
+import React, { useState } from 'react';
 import LeftBox from "./LeftBox";
+import RightBox from "./RightBox";
 
 function Body() {
-    return (
-        <main class="main-content">
-          <LeftBox/>
+  const [results, setResults] = useState([]);
+  const [hoveredResult, setHoveredResult] = useState(null);
+  const [drawCount, setDrawCount] = useState(0);
+  const [gradeCounts, setGradeCounts] = useState({ three: 0, four: 0, five: 0 });
+  const [total,setTotal] = useState(0);
+  
 
-    <div class="right-box">
-      
-      <div class="ceiling">
-          천장게이지
-      </div>
-      
-      <div class="inner-box">
-        <div class="data-area">  
-          <div class="box1">연차 횟수</div>
-          <div class="box2">5성</div>
-          <div class="box3">4성</div>
-          <div class="box4">3성</div>
-          <div class="box5">소모한 원석</div>
-        </div>
+  const handleDraw = (numDraws) => {
+    setDrawCount((prevCount) => prevCount + numDraws);
+    setTotal((prevCount) => prevCount + (numDraws * 180));
+    const newResults = [];
+    for (let i = 0; i < numDraws; i++) {
+      const resultObject = {
+        grade: generateGrade(),
+        name: generateName(),
+        description: generateDescription(),
+      };
 
-        <div class="right-inner-box2">
-        
-        </div>
-        
-      </div>
-    </div>
-  </main>
-    );
+      newResults.push(resultObject);
+    }
+
+    setResults(newResults);
+  };
+
+  const generateGrade = () => {
+    const grades = ['three', 'four', 'five'];
+    const randomIndex = Math.floor(Math.random() * grades.length);
+    const grade = grades[randomIndex];
+
+    setGradeCounts((prevCounts) => ({
+      ...prevCounts,
+      [grade]: prevCounts[grade] + 1,
+    }));
+
+    return grade;
+  };
+
+  const generateName = () => {
+    const names = ['쓰레기', '평타', '당첨'];
+    const randomIndex = Math.floor(Math.random() * names.length);
+    return names[randomIndex];
+  };
+
+  const generateDescription = () => {
+    const descriptions = ['3코입니다', '4코입니다', '5코입니다'];
+    const randomIndex = Math.floor(Math.random() * descriptions.length);
+    return descriptions[randomIndex];
+  };
+
+  const handleMouseEnter = (result) => {
+    setHoveredResult(result);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredResult(null);
+  };
+
+  return (
+    <main className="main-content">
+      <LeftBox
+        results={results}
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        hoveredResult={hoveredResult}
+      />
+      <RightBox
+        handleDraw={handleDraw}
+        drawCount={drawCount}
+        gradeCounts={gradeCounts}
+        total = {total}
+      />
+    </main>
+  );
 }
 
 export default Body;

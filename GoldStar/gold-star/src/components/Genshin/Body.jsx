@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LeftBox from "./LeftBox";
 import RightBox from "./RightBox";
+import axios from 'axios';
 
 function Body() {
   const [pickResult, setPickResult] = useState([]);
@@ -9,6 +10,20 @@ function Body() {
   const [gradeCounts, setGradeCounts] = useState({ three: 0, four: 0, five: 0 });
   const [total,setTotal] = useState(0);
   
+  // test용
+  const [cnt, setCnt] = useState(0);
+  async function testtt() {
+      const { data } = await axios.get(
+        `http://localhost:3001/genshine`,
+        {
+          params: {
+            count: cnt
+          }
+        });
+      console.log(data);
+      setCnt(cnt + 1);
+      console.log(cnt);
+  }
 
   const handleDraw = (numDraws) => {
     setDrawCount((prevCount) => prevCount + numDraws);
@@ -22,6 +37,7 @@ function Body() {
       };
 
       newResults.push(resultObject);
+      testtt();
     }
 
     setPickResult(newResults);

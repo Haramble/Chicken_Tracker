@@ -3,7 +3,7 @@ import LeftBox from "./LeftBox";
 import RightBox from "./RightBox";
 
 function Body() {
-  const [results, setResults] = useState([]);
+  const [pickResult, setPickResult] = useState([]);
   const [hoveredResult, setHoveredResult] = useState(null);
   const [drawCount, setDrawCount] = useState(0);
   const [gradeCounts, setGradeCounts] = useState({ three: 0, four: 0, five: 0 });
@@ -24,7 +24,7 @@ function Body() {
       newResults.push(resultObject);
     }
 
-    setResults(newResults);
+    setPickResult(newResults);
   };
 
   const generateGrade = () => {
@@ -52,8 +52,8 @@ function Body() {
     return descriptions[randomIndex];
   };
 
-  const handleMouseEnter = (result) => {
-    setHoveredResult(result);
+  const handleMouseEnter = (pickResult) => {
+    setHoveredResult(pickResult);
   };
 
   const handleMouseLeave = () => {
@@ -63,7 +63,7 @@ function Body() {
   return (
     <main className="main-content">
       <LeftBox
-        results={results}
+        pickResult={pickResult}
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
         hoveredResult={hoveredResult}

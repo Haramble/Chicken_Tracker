@@ -1,6 +1,6 @@
 import React from "react";
 
-function LeftBox({ results, handleMouseEnter, handleMouseLeave, hoveredResult }) {
+function LeftBox({ pickResult, handleMouseEnter, handleMouseLeave, hoveredResult }) {
     return (
         <div class="left-box">
             <div class="inner-box">
@@ -8,14 +8,14 @@ function LeftBox({ results, handleMouseEnter, handleMouseLeave, hoveredResult })
                 <div class="left-inner-box2">
                     <div className="result-container">
                         <div className="result-grid">
-                            {results.map((result, index) => (
+                            {pickResult.map((pickResult, index) => (
                                 <div
                                     key={index}
-                                    className={`result-item ${result.grade}`}
-                                    onMouseEnter={() => handleMouseEnter(result)}
+                                    className={`result-item ${pickResult.grade}`}
+                                    onMouseEnter={() => handleMouseEnter(pickResult)}
                                     onMouseLeave={handleMouseLeave}
                                 >
-                                    {result.grade}
+                                    {pickResult.grade}
                                 </div>
                             ))}
                         </div>

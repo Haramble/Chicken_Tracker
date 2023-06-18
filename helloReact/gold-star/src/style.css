@@ -167,3 +167,56 @@ header {
   height: 52%;
 
 }
+
+.result-container {
+  position: relative;
+  border: 1px solid black;
+  padding: 10px;
+  display: inline-block;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 600px;
+  height: 400px;
+  flex-wrap: wrap;
+}
+
+.result-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 10%;
+  color: white;
+}
+
+.result-tooltip {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid green;
+  padding: 10px;
+  color: black;
+}
+
+.three {
+  border-color: red;
+}
+
+.four {
+  border-color: yellow;
+}
+
+.five {
+  border-color: green;
+}
+
+
+

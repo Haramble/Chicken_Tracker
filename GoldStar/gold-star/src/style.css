@@ -1,6 +1,8 @@
 body {
   background-color: #000000;
   height: 80%;
+
+  background: radial-gradient( #525252, #000000);
 }
 
 header {
